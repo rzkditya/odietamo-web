@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #fffcf1;
+  --color-main: #fffcf1;
   --color-odea-main: #839259;
   --color-odea-text: #5c663f;
-  --color-toromi-main: #970501;
+  --color-toromi-main: #843b3b;
   --color-accent: #5b4338;
 }

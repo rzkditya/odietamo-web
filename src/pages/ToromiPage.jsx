@@ -6,15 +6,23 @@ import { Link } from "react-router-dom";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 
 const ToromiPage = () => {
-  var menuOption = "px-14 py-2 text-lg outline-1 rounded-md";
+  var menuOption = "w-64 px-14 py-2 text-lg outline-1 rounded-md";
 
   return (
     <>
       <div
         style={{ backgroundImage: `url(${toromiBG})` }}
-        className="flex flex-col w-full h-screen p-8 justify-center items-center bg-cover bg-center text-main outline-main overflow-y-auto"
+        className="flex flex-col w-full h-screen px-8 pt-0 justify-center items-center bg-cover bg-center gap-2 text-main outline-main overflow-x-hidden overflow-y-auto"
       >
-        <section className="flex flex-col w-full h-auto px-8 py-4 justify-center items-center mb-8 bg-toromi-main/60 rounded-2xl">
+        <header className="fixed top-0 w-screen p-2 bg-toromi-main/40">
+          <Link to="/">
+            <h1 className="text-xl text-center text-black/25 tracking-[0.2em]">
+              TOROMI SUITSU
+            </h1>
+          </Link>
+        </header>
+
+        <section className="flex flex-col w-full h-auto p-8 py-4 justify-center items-center mt-8 mb-4 bg-toromi-main/60 rounded-2xl">
           <div className="flex justify-center items-center w-48">
             <img src={tiramisu} alt="Tiramisu Image" />
           </div>
@@ -42,19 +50,24 @@ const ToromiPage = () => {
               </div>
             </div>
           </div>
-          <div className="flex self-start px-4 py-2 bg-toromi-main text-lg font-bold rounded-lg">
+          <div className="flex self-start px-4 py-2 bg-toromi-main text-md font-bold rounded-lg">
             <div className="flex">Price: 40K</div>
           </div>
         </section>
-        <section className="flex flex-col gap-4 mb-8 font-bold">
-          <button className={`${menuOption}`} onClick={() => alert("1")}>
-            Order
-          </button>
+        <section className="flex flex-col gap-4 mb-4 font-bold">
+          <a href="https://wa.me/628977708767?text=Halo!%20Saya%20mau%20pesan%20tiramisu:%0A%0A%E2%80%A2%20Pesanan:%0A%E2%80%A2%20Nama:%0A%E2%80%A2%20Alamat%20/%20Takeaway:%0A%E2%80%A2%20Jam%20Pengambilan/Kirim:%0A%0AMohon%20konfirmasi%20total%20biayanya%20ya,%20terima%20kasih!">
+            <button
+              className={`${menuOption}`}
+              onClick={() => alert("Redirecting to WhatsApp...")}
+            >
+              Order
+            </button>
+          </a>
           <button className={`${menuOption}`} onClick={() => alert("2")}>
             Event Package
           </button>
         </section>
-        <section className="flex p-2 gap-2 bg-white/30 rounded-xl">
+        <section className="flex px-4 py-2 gap-2 bg-white/30 rounded-3xl">
           <a href="http://instagram.com/toromi.suitsu">
             <FontAwesomeIcon icon={faInstagram} size="2xl" />
           </a>

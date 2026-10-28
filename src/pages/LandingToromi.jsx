@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import tiramisuBG from "../assets/Tiramisu BG.png";
 import toromiLogo from "../assets/Toromi Logo.svg";
 import { useNavigate } from "react-router-dom";

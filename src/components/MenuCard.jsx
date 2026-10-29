@@ -3,14 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Card({ item }) {
   return (
-    <section className="flex flex-col w-full h-auto p-8 py-4 justify-center items-center mt-8 mb-4 bg-odea-main/60 rounded-2xl">
+    <section className="flex flex-col w-full h-100 p-8 py-4 justify-baseline items-center mt-8 mb-4 bg-odea-main/40 rounded-2xl">
       <div className="flex justify-center items-center w-42">
         <img src="" alt="Tiramisu Image" />
       </div>
 
-      <div className="flex flex-col font-bold tracking-tight gap-3 mb-4">
-        <div className="flex flex-col mb-2">
-          <div className="flex justify-between items-end">
+      <div className="flex flex-col w-full justify-start items-start font-bold tracking-tight gap-3 mb-4">
+        <div className="flex flex-col mb-2 w-full">
+          <div className="flex justify-between items-center">
             <div className="text-2xl">{item.name}</div>
             <div>
               <FontAwesomeIcon icon={faHeart} size="xl" />
@@ -33,10 +33,10 @@ function Card({ item }) {
         </div>
       </div>
       <div className="flex self-start gap-4">
-        <div className="flex px-4 py-2 bg-odea-main text-sm font-bold rounded-lg">
+        <div className="flex px-4 py-2 bg-odea-main/60 text-sm font-bold rounded-lg">
           1L: {item.priceL}
         </div>
-        <div className="flex px-4 py-2 bg-odea-main text-sm font-bold rounded-lg">
+        <div className="flex px-4 py-2 bg-odea-main/60 text-sm font-bold rounded-lg">
           250ml: {item.priceS}
         </div>
       </div>

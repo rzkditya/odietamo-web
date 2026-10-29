@@ -1,17 +1,34 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faThreads } from "@fortawesome/free-brands-svg-icons";
-import toromiBG from "../assets/Toromi BG.svg";
+import odeaBG from "../assets/Odea BG.svg";
 import { Link } from "react-router-dom";
 import { menuList } from "../datas/OdeaMenu.js";
 import Card from "../components/MenuCard.jsx";
+import { useState } from "react";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 const OdeaPage = () => {
   var menuOption = "w-64 px-14 py-2 text-xl outline-1 rounded-md";
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % menuList.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? menuList.length - 1 : prevIndex - 1,
+    );
+  };
+
   return (
     <>
       <div
-        style={{ backgroundImage: `url(${toromiBG})` }}
+        style={{ backgroundImage: `url(${odeaBG})` }}
         className="flex flex-col w-full h-screen px-8 pt-0 justify-center items-center bg-cover bg-center gap-2 text-main outline-main overflow-x-hidden overflow-y-auto"
       >
         <header className="fixed top-0 w-screen p-2 bg-odea-main/40">
@@ -22,9 +39,21 @@ const OdeaPage = () => {
           </Link>
         </header>
 
-        {menuList.map((item) => (
-          <Card key={item.id} item={item} />
-        ))}
+        <div className="relative gap-4 w-full">
+          <Card item={menuList[currentIndex]} />
+          <button
+            onClick={handlePrev}
+            className="absolute -left-6 top-[50%] p-4 text-white bg-gray-700 rounded-full hover:bg-gray-800 transition"
+          >
+            <FontAwesomeIcon icon={faChevronLeft} size="3xl" />
+          </button>
+          <button
+            onClick={handleNext}
+            className="absolute -right-6 top-[50%] p-4 text-white bg-gray-700 rounded-full hover:bg-gray-800 transition"
+          >
+            <FontAwesomeIcon icon={faChevronRight} size="3xl" />
+          </button>
+        </div>
 
         <section className="flex flex-col gap-4 mb-4">
           <a href="https://wa.me/628977708767?text=Halo!%20Saya%20mau%20pesan%20kopi:%0A%0A%E2%80%A2%20Pesanan:%0A%E2%80%A2%20Nama:%0A%E2%80%A2%20Alamat%20/%20Takeaway:%0A%E2%80%A2%20Jam%20Pengambilan/Kirim:%0A%0AMohon%20konfirmasi%20total%20biayanya%20ya,%20terima%20kasih!">

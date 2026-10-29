@@ -7,7 +7,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center p-8 gap-8 bg-background w-screen h-screen">
+      <div className="flex flex-col justify-center items-center p-8 gap-8 bg-background w-full min-h-dvh">
         <Link to="/odea">
           <div id="Odi Et Amo Home" className={`${layout}`}>
             <img src={odeaIcon} alt="" className="aspect-4/5 object-contain" />

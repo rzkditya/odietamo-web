@@ -12,9 +12,9 @@ const ToromiPage = () => {
     <>
       <div
         style={{ backgroundImage: `url(${toromiBG})` }}
-        className="flex flex-col w-full h-screen px-8 pt-0 justify-center items-center bg-cover bg-center gap-2 text-main outline-main overflow-x-hidden overflow-y-auto"
+        className="flex flex-col w-full min-h-dvh px-8 pt-0 justify-center items-center bg-cover bg-center gap-2 text-main outline-main overflow-x-hidden overflow-y-auto"
       >
-        <header className="fixed top-0 w-screen p-2 bg-toromi-main/40">
+        <header className="fixed top-0 w-full p-2 bg-toromi-main/40">
           <Link to="/">
             <h1 className="text-xl text-center text-black/25 tracking-[0.2em]">
               TOROMI SUITSU

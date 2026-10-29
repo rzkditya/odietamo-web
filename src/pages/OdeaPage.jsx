@@ -43,15 +43,15 @@ const OdeaPage = () => {
           <Card item={menuList[currentIndex]} />
           <button
             onClick={handlePrev}
-            className="absolute -left-6 top-[50%] p-4 text-white bg-gray-700 rounded-full hover:bg-gray-800 transition"
+            className="absolute left-2 top-[20%] text-white"
           >
-            <FontAwesomeIcon icon={faChevronLeft} size="3xl" />
+            <FontAwesomeIcon icon={faChevronLeft} size="3x" />
           </button>
           <button
             onClick={handleNext}
-            className="absolute -right-6 top-[50%] p-4 text-white bg-gray-700 rounded-full hover:bg-gray-800 transition"
+            className="absolute right-2 top-[20%] text-white"
           >
-            <FontAwesomeIcon icon={faChevronRight} size="3xl" />
+            <FontAwesomeIcon icon={faChevronRight} size="3x" />
           </button>
         </div>
 

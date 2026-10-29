@@ -1,4 +1,3 @@
-import React from "react";
 import odeaIcon from "../assets/Odea Icon.svg";
 import toromiIcon from "../assets/Toromi Icon.svg";
 import { Link } from "react-router-dom";
@@ -17,7 +16,11 @@ const Home = () => {
         <div className="text-lg text-odea-text italic">Choose your mood ♡</div>
         <Link to="/toromi">
           <div id="Toromi Home" className={`${layout} `}>
-            <img src={toromiIcon} alt="" className="aspect-4/5 object-contain" />
+            <img
+              src={toromiIcon}
+              alt=""
+              className="aspect-4/5 object-contain"
+            />
           </div>
         </Link>
       </div>

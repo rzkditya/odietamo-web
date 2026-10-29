@@ -1,11 +1,12 @@
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import tiramisu from "../assets/Tiramisu.svg";
 
 function Card({ item }) {
   return (
-    <section className="flex flex-col w-full h-100 p-8 py-4 justify-baseline items-center mt-8 mb-4 bg-odea-main/40 rounded-2xl">
-      <div className="flex justify-center items-center w-42">
-        <img src="" alt="Tiramisu Image" />
+    <section className="flex flex-col w-full h-134 p-8 py-4 justify-baseline items-center mt-8 mb-4 bg-odea-main/40 rounded-2xl">
+      <div className="flex justify-center items-center w-48">
+        <img src={tiramisu} alt="Tiramisu Image" />
       </div>
 
       <div className="flex flex-col w-full justify-start items-start font-bold tracking-tight gap-3 mb-4">

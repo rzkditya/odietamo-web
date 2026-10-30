@@ -40,10 +40,10 @@ function Card({ item }) {
 
       <div className="flex items-center self-start gap-2 font-semibold">
         Price:
-        <div className="flex px-4 py-2 bg-odea-main/40 text-xs font-bold rounded-lg">
+        <div className="flex px-4 py-2 bg-black/25 text-xs font-bold rounded-lg">
           1L: {item.priceL}
         </div>
-        <div className="flex px-4 py-2 bg-odea-main/40 text-xs font-bold rounded-lg">
+        <div className="flex px-4 py-2 bg-black/25 text-xs font-bold rounded-lg">
           250ml: {item.priceS}
         </div>
       </div>

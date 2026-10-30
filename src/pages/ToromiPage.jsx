@@ -55,7 +55,7 @@ const ToromiPage = () => {
             </div>
           </div>
 
-          <div className="flex self-start px-4 py-2 bg-toromi-main/40 text-xs font-bold rounded-lg">
+          <div className="flex self-start px-4 py-2 bg-black/25 text-xs font-bold rounded-lg">
             <div className="flex">Price: 40K</div>
           </div>
         </section>

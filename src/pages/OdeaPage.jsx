@@ -9,6 +9,7 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import Feedback from "./Feedback.jsx";
 
 const OdeaPage = () => {
   var menuOption = "w-42 p-2 text-lg outline-1 rounded-md";
@@ -77,6 +78,8 @@ const OdeaPage = () => {
           </a>
         </section>
       </div>
+
+      <Feedback />
     </>
   );
 };

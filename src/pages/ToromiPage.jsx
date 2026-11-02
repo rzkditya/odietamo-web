@@ -4,6 +4,7 @@ import toromiBG from "../assets/Toromi BG.svg";
 import tiramisu from "../assets/Tiramisu.svg";
 import { Link } from "react-router-dom";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import FeedbackForm from "../components/FeedbackForm.jsx";
 
 const ToromiPage = () => {
   var menuOption = "w-42 p-2 text-lg outline-1 rounded-md";
@@ -82,6 +83,8 @@ const ToromiPage = () => {
           </a>
         </section>
       </div>
+
+      <FeedbackForm bgImage={toromiBG} targetEmail="" />
     </>
   );
 };

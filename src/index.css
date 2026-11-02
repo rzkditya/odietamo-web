@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @theme {
+  --font-open-sauce: "Open Sauce Sans", sans-serif;
+  --font-sans: var(--font-open-sauce);
+
   --color-main: #fffcf1;
   --color-odea-main: #5d843b;
   --color-odea-text: #5c663f;

@@ -84,7 +84,7 @@ const ToromiPage = () => {
         </section>
       </div>
 
-      <FeedbackForm bgImage={toromiBG} targetEmail="" />
+      <FeedbackForm bgImage={toromiBG} toEmail="toromi.suitsu@gmail.com" />
     </>
   );
 };

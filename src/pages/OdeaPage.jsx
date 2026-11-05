@@ -81,7 +81,7 @@ const OdeaPage = () => {
         </div>
       </div>
 
-      <FeedbackForm bgImage={odeaBG} targetEmail="odietamo.coffee@gmail.com" />
+      <FeedbackForm bgImage={odeaBG} toEmail="odietamo.coffee@gmail.com" />
     </>
   );
 };

@@ -1,13 +1,16 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-const FeedbackForm = ({ bgImage }) => {
+const FeedbackForm = ({ bgImage, toEmail }) => {
   const inputStyle =
     "w-74 py-2 px-4 text-white border border-white rounded-3xl mb-2 focus:ring-2 focus:ring-red-300 focus:ring-offset-2 focus:ring-offset-black/40";
 
   const form = useRef();
+  const [loading, setLoading] = useState(false);
+
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
       .sendForm("service_6l0xmxi", "template_4sis7zt", form.current, {
@@ -15,12 +18,17 @@ const FeedbackForm = ({ bgImage }) => {
       })
       .then(
         () => {
-          console.log("Email sent successfully!");
+          alert("Email sent successfully!");
+          form.current.reset();
         },
         (error) => {
           console.log("Error sending email:", error.text);
+          alert("Failed to send email. Please try again later.");
         },
-      );
+      )
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -38,6 +46,7 @@ const FeedbackForm = ({ bgImage }) => {
         className="flex gap-4 w-full justify-center items-center"
       >
         <fieldset className="flex flex-col w-full justify-center items-center text-white gap-4">
+          <input type="hidden" name="to_email" value={toEmail} />
           <div className="flex flex-col gap-2">
             <label htmlFor="name">Name</label>
             <input
@@ -76,7 +85,7 @@ const FeedbackForm = ({ bgImage }) => {
             value="Send"
             className="self-center w-40 text-white py-2 px-4 rounded-lg border border-white hover:bg-main/80 transition-colors"
           >
-            SEND
+            {loading ? "Sending..." : "Send Feedback"}
           </button>
         </fieldset>
       </form>

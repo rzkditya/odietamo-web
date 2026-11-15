@@ -1,4 +1,4 @@
-export const menuList = [
+export const odeaMenuList = [
   {
     id: 1,
     name: "Odea Latte",
@@ -53,5 +53,30 @@ export const menuList = [
     ingredients: "Jasmine Green Tea, Fresh Milk, Simple Syrup",
     priceS: "18K",
     priceL: "65K",
+  },
+];
+
+export const toromiMenuList = [
+  {
+    id: 1,
+    name: "Tiramisu",
+    size: "Personal Size",
+    desc: "A little box of happiness, filled with creamy layers of tiramisu, perfect for satisfying your sweet cravings",
+    sweetness: "Lightly Sweet",
+    intensity: "Bold & Coffee forward",
+    ingredients:
+      "Italian Lady Finger, Mascarpone Cheese, Americano, Cocoa Powder",
+    price: "40k",
+  },
+  {
+    id: 1,
+    name: "Tiramisu",
+    size: "Sharing Size",
+    desc: "Classic Tiramisu",
+    sweetness: "Lightly Sweet",
+    intensity: "Bold & Coffee forward",
+    ingredients:
+      "Italian Lady Finger, Mascarpone Cheese, Americano, Cocoa Powder",
+    price: "100k",
   },
 ];

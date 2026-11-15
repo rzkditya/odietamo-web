@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faThreads } from "@fortawesome/free-brands-svg-icons";
 import odeaBG from "../assets/Odea BG.svg";
 import { Link } from "react-router-dom";
-import { menuList } from "../datas/OdeaMenu.js";
+import { odeaMenuList } from "../datas/OdeaMenu.js";
 import Card from "../components/MenuCard.jsx";
 import { useState } from "react";
 import {
@@ -17,12 +17,12 @@ const OdeaPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % menuList.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % odeaMenuList.length);
   };
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? menuList.length - 1 : prevIndex - 1,
+      prevIndex === 0 ? odeaMenuList.length - 1 : prevIndex - 1,
     );
   };
 
@@ -42,7 +42,7 @@ const OdeaPage = () => {
           </header>
 
           <div className="relative gap-4 w-full">
-            <Card item={menuList[currentIndex]} />
+            <Card type="odea" item={odeaMenuList[currentIndex]} />
             <button
               onClick={handlePrev}
               className="absolute left-2 top-[20%] text-white"

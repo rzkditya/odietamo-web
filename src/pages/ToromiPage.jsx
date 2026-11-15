@@ -5,9 +5,28 @@ import tiramisu from "../assets/Tiramisu.svg";
 import { Link } from "react-router-dom";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import FeedbackForm from "../components/FeedbackForm.jsx";
+import MenuCard from "../components/MenuCard.jsx";
+import { toromiMenuList } from "../datas/OdeaMenu.js";
+import { useState } from "react";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 const ToromiPage = () => {
   var menuOption = "w-42 p-2 text-lg outline-1 rounded-md";
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % toromiMenuList.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? toromiMenuList.length - 1 : prevIndex - 1,
+    );
+  };
 
   return (
     <>
@@ -22,7 +41,7 @@ const ToromiPage = () => {
             </h1>
           </Link>
         </header>
-
+        {/*
         <section className="flex flex-col w-full h-105 p-6 py-2 justify-baseline items-center mt-8 mb-2 bg-toromi-main/40 rounded-2xl">
           <div className="flex justify-center items-center w-34 object-contain mb-2">
             <img src={tiramisu} alt="Tiramisu Image" />
@@ -60,6 +79,22 @@ const ToromiPage = () => {
             <div className="flex">Price: 40K</div>
           </div>
         </section>
+  */}
+        <div className="relative gap-4 w-full">
+          <MenuCard type="toromi" item={toromiMenuList[currentIndex]} />
+          <button
+            onClick={handlePrev}
+            className="absolute left-2 top-[20%] text-white"
+          >
+            <FontAwesomeIcon icon={faChevronLeft} size="2x" />
+          </button>
+          <button
+            onClick={handleNext}
+            className="absolute right-2 top-[20%] text-white"
+          >
+            <FontAwesomeIcon icon={faChevronRight} size="2x" />
+          </button>
+        </div>
 
         <section className="flex flex-col gap-4 mb-2">
           <a href="https://wa.me/628977708767?text=Halo!%20Saya%20mau%20pesan%20tiramisu:%0A%0A%E2%80%A2%20Pesanan:%0A%E2%80%A2%20Nama:%0A%E2%80%A2%20Alamat%20/%20Takeaway:%0A%E2%80%A2%20Jam%20Pengambilan/Kirim:%0A%0AMohon%20konfirmasi%20total%20biayanya%20ya,%20terima%20kasih!">

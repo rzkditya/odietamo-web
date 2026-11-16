@@ -1,5 +1,5 @@
 import odeaLogo from "../assets/Odea Logo.png";
-import toromiLogo from "../assets/Toromi Logo.svg";
+import toromiLogo from "../assets/Toromi/Toromi Logo.svg";
 import { Link } from "react-router-dom";
 import HomeBG from "../assets/Home BG.png";
 

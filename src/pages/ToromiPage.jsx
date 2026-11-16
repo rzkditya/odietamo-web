@@ -1,9 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faThreads } from "@fortawesome/free-brands-svg-icons";
-import toromiBG from "../assets/Toromi BG.svg";
-import tiramisu from "../assets/Tiramisu.svg";
+import toromiBG from "../assets/Toromi/Toromi BG.svg";
 import { Link } from "react-router-dom";
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import FeedbackForm from "../components/FeedbackForm.jsx";
 import MenuCard from "../components/MenuCard.jsx";
 import { toromiMenuList } from "../datas/OdeaMenu.js";

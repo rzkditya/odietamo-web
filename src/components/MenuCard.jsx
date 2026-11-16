@@ -1,25 +1,26 @@
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import tiramisu from "../assets/Tiramisu.svg";
+import tiramisu from "../assets/Toromi/Tiramisu.svg";
 
 function Card({ type, item }) {
   if (type === "toromi") {
     return (
-      <section className="flex flex-col w-full h-105 p-6 py-2 justify-baseline items-center mt-8 mb-2 bg-toromi-main/40 rounded-2xl">
-        <div className="flex justify-center items-center w-34 object-contain mb-2">
-          <img src={tiramisu} alt="Tiramisu Image" />
+      <section className="flex flex-col w-full h-fit p-6 py-4 justify-baseline items-center mt-8 mb-2 bg-toromi-main/40 rounded-2xl">
+        <div className="flex justify-center items-center w-38 object-contain mb-2">
+          <img src={item.image} alt="Tiramisu Image" />
         </div>
 
-        <div className="flex flex-col w-full justify-start items-start tracking-tight mb-2">
-          <div className="flex flex-col mb-2 w-full">
+        <div className="flex flex-col w-full justify-start items-start tracking-tight mb-4">
+          <div className="flex flex-col mb-4 w-full">
             <div className="flex justify-between items-center">
               <div className="text-[clamp(1.0rem,5.5vw,2rem)] font-bold">
-                {item.name} - {item.size}
+                {item.name}
               </div>
               <div>
                 <FontAwesomeIcon icon={faHeart} size="xl" />
               </div>
             </div>
+            <span className="text-md font-semibold  ">{item.size}</span>
             <div className="flex text-sm">{item.desc}</div>
           </div>
 
@@ -39,8 +40,8 @@ function Card({ type, item }) {
           </div>
         </div>
 
-        <div className="flex items-center self-start gap-2 font-semibold">
-          Price: {item.price}
+        <div className="flex items-center self-start gap-2">
+          Price: <span className="text-md font-semibold">Rp. {item.price}</span>
         </div>
       </section>
     );

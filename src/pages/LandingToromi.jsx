@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import tiramisuBG from "../assets/Tiramisu BG.png";
-import toromiLogo from "../assets/Toromi Logo.svg";
+import tiramisuBG from "../assets/Toromi/Tiramisu BG.png";
+import toromiLogo from "../assets/Toromi/Toromi Logo.svg";
 import { useNavigate } from "react-router-dom";
 
 const LandingToromi = () => {

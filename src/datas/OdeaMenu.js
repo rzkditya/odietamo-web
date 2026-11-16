@@ -59,24 +59,26 @@ export const odeaMenuList = [
 export const toromiMenuList = [
   {
     id: 1,
-    name: "Tiramisu",
-    size: "Personal Size",
-    desc: "A little box of happiness, filled with creamy layers of tiramisu, perfect for satisfying your sweet cravings",
+    name: "Classic Tiramisu",
+    size: "Personal Size - 250ml",
+    desc: "A single-serve box of creamy, bold classic tiramisu.",
     sweetness: "Lightly Sweet",
     intensity: "Bold & Coffee forward",
     ingredients:
       "Italian Lady Finger, Mascarpone Cheese, Americano, Cocoa Powder",
-    price: "40k",
+    price: "40.000",
+    image: new URL("../assets/Toromi/PersonalSize.svg", import.meta.url).href,
   },
   {
-    id: 1,
-    name: "Tiramisu",
-    size: "Sharing Size",
-    desc: "Classic Tiramisu",
+    id: 2,
+    name: "Classic Tiramisu",
+    size: "Sharing Size - 650ml",
+    desc: "A bigger box of classic tiramisu for sweet moments together.",
     sweetness: "Lightly Sweet",
     intensity: "Bold & Coffee forward",
     ingredients:
       "Italian Lady Finger, Mascarpone Cheese, Americano, Cocoa Powder",
-    price: "100k",
+    price: "100.000",
+    image: new URL("../assets/Toromi/SharingSize.svg", import.meta.url).href,
   },
 ];

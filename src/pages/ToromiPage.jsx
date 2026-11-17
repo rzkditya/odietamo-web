@@ -12,7 +12,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const ToromiPage = () => {
-  var menuOption = "w-42 p-2 text-lg outline-1 rounded-md";
+  var menuOption = "w-40 p-2 text-md border-1 rounded-md";
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -78,23 +78,23 @@ const ToromiPage = () => {
           </div>
         </section>
   */}
-        <div className="relative gap-4 w-full">
+        <div className="relative flex justify-center gap-4 w-full">
           <MenuCard type="toromi" item={toromiMenuList[currentIndex]} />
           <button
             onClick={handlePrev}
-            className="absolute left-2 top-[20%] text-white"
+            className="absolute left-2 md:left-[36%] top-[20%] md:top-[30%] md:scale-150 text-white"
           >
             <FontAwesomeIcon icon={faChevronLeft} size="2x" />
           </button>
           <button
             onClick={handleNext}
-            className="absolute right-2 top-[20%] text-white"
+            className="absolute right-2 md:right-[36%] top-[20%] md:top-[30%] md:scale-150 text-white"
           >
             <FontAwesomeIcon icon={faChevronRight} size="2x" />
           </button>
         </div>
 
-        <section className="flex flex-col gap-4 mb-2">
+        <section className="flex flex-col gap-2 md:gap-4 mb-2">
           <a href="https://wa.me/628977708767?text=Halo!%20Saya%20mau%20pesan%20tiramisu:%0A%0A%E2%80%A2%20Pesanan:%0A%E2%80%A2%20Nama:%0A%E2%80%A2%20Alamat%20/%20Takeaway:%0A%E2%80%A2%20Jam%20Pengambilan/Kirim:%0A%0AMohon%20konfirmasi%20total%20biayanya%20ya,%20terima%20kasih!">
             <button
               className={`${menuOption}`}

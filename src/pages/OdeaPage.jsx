@@ -12,7 +12,7 @@ import {
 import FeedbackForm from "../components/FeedbackForm.jsx";
 
 const OdeaPage = () => {
-  var menuOption = "w-42 p-2 text-lg outline-1 rounded-md";
+  var menuOption = "w-40 p-2 text-md border-1 rounded-md";
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -30,9 +30,9 @@ const OdeaPage = () => {
     <>
       <div
         style={{ backgroundImage: `url(${odeaBG})` }}
-        className="flex flex-col w-full h-dvh px-6 pt-0 justify-center items-center bg-cover bg-center gap-2 text-main outline-main overflow-x-hidden overflow-y-scroll"
+        className="flex flex-col w-full min-h-dvh px-6 pt-0 justify-center items-center bg-cover bg-center gap-2 text-main outline-main overflow-x-hidden overflow-y-scroll"
       >
-        <div className="flex flex-col w-full h-full justify-center items-center gap-4">
+        <div className="flex flex-col w-full h-full justify-center items-center gap-2 md:gap-4">
           <header className="fixed top-0 w-full bg-odea-main/40">
             <Link to="/">
               <h1 className="text-lg text-center text-black/25 tracking-[0.2em]">
@@ -41,23 +41,23 @@ const OdeaPage = () => {
             </Link>
           </header>
 
-          <div className="relative gap-4 w-full">
+          <div className="relative flex justify-center gap-4 w-full">
             <Card type="odea" item={odeaMenuList[currentIndex]} />
             <button
               onClick={handlePrev}
-              className="absolute left-2 top-[20%] text-white"
+              className="absolute  left-2 md:left-[36%] top-[20%] md:top-[25%] md:scale-150 text-white"
             >
               <FontAwesomeIcon icon={faChevronLeft} size="2x" />
             </button>
             <button
               onClick={handleNext}
-              className="absolute right-2 top-[20%] text-white"
+              className="absolute right-2 md:right-[36%] top-[20%] md:top-[25%] md:scale-150 text-white"
             >
               <FontAwesomeIcon icon={faChevronRight} size="2x" />
             </button>
           </div>
 
-          <section className="flex flex-col gap-4 mb-2">
+          <section className="flex flex-col gap-2 md:gap-4 mb-2">
             <a href="https://wa.me/628977708767?text=Halo!%20Saya%20mau%20pesan%20kopi:%0A%0A%E2%80%A2%20Pesanan:%0A%E2%80%A2%20Nama:%0A%E2%80%A2%20Alamat%20/%20Takeaway:%0A%E2%80%A2%20Jam%20Pengambilan/Kirim:%0A%0AMohon%20konfirmasi%20total%20biayanya%20ya,%20terima%20kasih!">
               <button
                 className={`${menuOption}`}

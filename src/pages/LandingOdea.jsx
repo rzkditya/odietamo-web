@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import odeaBG from "../assets/Bar BG.JPG";
-import odeaLogo from "../assets/Odea Logo.png";
+import odeaBG from "../assets/Odea/Bar BG.JPG";
+import odeaLogo from "../assets/Odea/Odea Logo.svg";
 import { useNavigate } from "react-router-dom";
 
 const LandingOdea = () => {
@@ -20,7 +20,7 @@ const LandingOdea = () => {
       }}
       className="flex flex-col w-full h-screen justify-center items-center bg-cover bg-center gap-12"
     >
-      <img src={odeaLogo} alt="Logo Odea" />
+      <img src={odeaLogo} alt="Logo Odea" className="scale-50" />
 
       <p className="text-main">Redirecting to menu. . .</p>
     </div>

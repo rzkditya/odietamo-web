@@ -1,4 +1,4 @@
-import odeaLogo from "../assets/Odea Logo.png";
+import odeaLogo from "../assets/Odea/Odea Logo.svg";
 import toromiLogo from "../assets/Toromi/Toromi Logo.svg";
 import { Link } from "react-router-dom";
 import HomeBG from "../assets/Home BG.png";
@@ -17,7 +17,11 @@ const Home = () => {
       >
         <Link to="/odea">
           <div id="Odi Et Amo Home" className={`${layout}`}>
-            <img src={odeaLogo} alt="" className="aspect-4/5 object-contain" />
+            <img
+              src={odeaLogo}
+              alt=""
+              className="aspect-4/5 object-contain scale-80"
+            />
           </div>
         </Link>
         <div className="text-xl text-white italic tracking-widest">

@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faThreads } from "@fortawesome/free-brands-svg-icons";
-import odeaBG from "../assets/Odea BG.svg";
+import odeaBG from "../assets/Odea/Odea BG.svg";
 import { Link } from "react-router-dom";
 import { odeaMenuList } from "../datas/OdeaMenu.js";
 import Card from "../components/MenuCard.jsx";
